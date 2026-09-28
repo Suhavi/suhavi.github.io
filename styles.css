@@ -1,7 +1,9 @@
 :root {
   /* COLOR PALETTE: change these values to recolor the whole site. */
-  --background: #501723;
-  --text: #a6b3dc;
+  --background: #42305a;
+  /* --background: #355f37; */
+  /* --text: #f2b6cb; */
+  --text: #dcd5a6;
   --rule: rgba(218, 144, 59, 0.35);
 }
 
