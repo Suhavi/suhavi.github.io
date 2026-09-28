@@ -1,0 +1,136 @@
+:root {
+  /* COLOR PALETTE: change these values to recolor the whole site. */
+  --background: #501723;
+  --text: #a6b3dc;
+  --rule: rgba(218, 144, 59, 0.35);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+::selection { background: var(--text); color: var(--background); }
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  padding: 8px 12px;
+  background: var(--text);
+  color: var(--background);
+  z-index: 5;
+}
+.skip-link:focus { top: 12px; }
+
+.site {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 21px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.site-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.site-header nav { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 14px; }
+.layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 52px;
+  padding: 38px 0 68px;
+}
+.profile { align-self: start; position: sticky; top: 24px; }
+.profile-photo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  border: 1px solid var(--rule);
+  border-radius: 22%;
+}
+.profile h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  line-height: 1.15;
+  margin: 19px 0 9px;
+}
+.profile-about-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 18px 0 10px;
+}
+.profile-links-inline { margin-top: 18px; font-size: 14px; }
+.profile-role, .profile-location { margin: 0 0 13px; }
+.profile-role { font-weight: 600; line-height: 1.45; }
+.profile-location { font-size: 14px; }
+.profile-links { list-style: none; padding: 0; margin: 18px 0 0; font-size: 14px; }
+.profile-links li { margin: 5px 0; }
+main { min-width: 0; }
+section { margin: 0 0 35px; scroll-margin-top: 24px; }
+section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--rule);
+}
+p { margin: 0 0 14px; }
+.lead { font-size: 18px; margin-bottom: 12px; }
+.work-item { margin-bottom: 18px; }
+.work-item h3 { font-size: 17px; line-height: 1.4; margin: 0 0 3px; }
+.work-item p { margin-bottom: 3px; }
+.work-links { font-size: 14px; }
+/* Optional research images added in index.html use this compact width. */
+.work-image { display: block; max-width: 100%; width: 480px; height: auto; margin: 10px 0; }
+.news-list { list-style: none; margin: 0; padding: 0; }
+.news-list li { display: grid; grid-template-columns: 103px minmax(0, 1fr); gap: 12px; margin: 0 0 11px; }
+.news-list time { font-weight: 650; white-space: nowrap; }
+footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; font-size: 13px; }
+
+@media (max-width: 760px) {
+  .site { padding: 0 22px; }
+  .layout { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  .profile { position: static; display: flex; align-items: flex-start; gap: 22px; }
+  .profile-photo { width: 145px; height: 145px; flex: none; }
+  .profile h1 { margin-top: 0; }
+  .profile-links { display: flex; flex-wrap: wrap; gap: 2px 14px; margin-top: 8px; }
+  .profile-links li { margin: 0; }
+}
+@media (max-width: 520px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .site-header nav { gap: 8px 16px; }
+  .profile-photo { width: 104px; height: 104px; margin-bottom: 18px; }
+  .profile { display: block; }
+  .profile h1 { font-size: 23px; }
+  .profile-role, .profile-location { font-size: 13px; margin-bottom: 6px; }
+  .profile-links { font-size: 13px; }
+  .news-list li { grid-template-columns: 1fr; gap: 0; margin-bottom: 14px; }
+  section h2 { font-size: 25px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
