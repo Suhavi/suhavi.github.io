@@ -82,15 +82,22 @@ a:focus-visible { outline: 2px solid var(--muted); outline-offset: 3px; }
 }
 .profile h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 26px;
+  font-size: 30px;
   line-height: 1.15;
-  margin: 19px 0 9px;
+  margin: 19px 0 5px;
+}
+.profile-tagline {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 18px;
 }
 .profile-about-title {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 20px;
   line-height: 1.2;
-  margin: 18px 0 10px;
+  margin: 0 0 10px;
 }
 .profile-links-inline {
   display: flex;
