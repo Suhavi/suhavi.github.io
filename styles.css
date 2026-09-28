@@ -92,7 +92,37 @@ a:focus-visible { outline: 2px solid var(--muted); outline-offset: 3px; }
   line-height: 1.2;
   margin: 18px 0 10px;
 }
-.profile-links-inline { margin-top: 18px; font-size: 14px; }
+.profile-links-inline {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-top: 18px;
+}
+.profile-links-inline a {
+  display: inline-flex;
+  color: var(--icon-color);
+  text-decoration: none;
+}
+.profile-links-inline a:visited { color: var(--icon-color); }
+.profile-links-inline a:hover { color: var(--icon-hover); }
+.icon-link-cv { --icon-color: #8c3f46; --icon-hover: #642a30; }
+.icon-link-github { --icon-color: #343a40; --icon-hover: #171a1d; }
+.icon-link-scholar { --icon-color: #376b9e; --icon-hover: #274d73; }
+.icon-link-email { --icon-color: #a7463f; --icon-hover: #79312d; }
+.icon-link-linkedin { --icon-color: #17679a; --icon-hover: #104b72; }
+.profile-links-inline svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.profile-links-inline .icon-fill {
+  fill: currentColor;
+  stroke: none;
+}
 .profile-role, .profile-location { margin: 0 0 13px; }
 .profile-role { font-weight: 600; line-height: 1.45; }
 .profile-location { font-size: 14px; }
@@ -117,7 +147,14 @@ p { margin: 0 0 14px; }
 /* Optional research images added in index.html use this compact width. */
 .work-image { display: block; max-width: 100%; width: 480px; height: auto; margin: 10px 0; }
 .news-list { list-style: none; margin: 0; padding: 0; }
-.news-list li { display: grid; grid-template-columns: 103px minmax(0, 1fr); gap: 12px; margin: 0 0 11px; }
+/* .news-list li { display: grid; grid-template-columns: 103px minmax(0, 1fr); gap: 12px; margin: 0 0 11px; } */
+.news-list li {
+  display: grid;
+  grid-template-columns: 103px minmax(0, 1fr);
+  gap: 12px;
+  margin: 0 0 4px;
+  line-height: 1.35;
+}
 .news-list time { font-weight: 650; white-space: nowrap; }
 footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; font-size: 13px; }
 
